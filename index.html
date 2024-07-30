@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="theme-color"
+      content="linear-gradient(to bottom, #61daff, #656bff)"
+    />
+    <meta
+      name="description"
+      content="We will simple add to cart using javascript localstorage"
+    />
+    <meta
+      name="keywords"
+      content="add to cart, add to cart javascript, localstorage add to cart, ecommerce shopping javascript, shooping cart demo"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!--<link
+      rel="icon"
+      href="https://rajamanickam.vercel.app/favicon-rajamanickam.png"
+    />-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css"
+    />
+    <title>Mr.Kissan</title>
+  </head>
+
+  <body>
+    <main>
+
+
+      <!--
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: green;
+        }
+  
+        header {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 1em 0;
+        }
+  
+        nav {
+          text-align:justify;
+          background-color: #444;
+          padding: 0.5em 0;
+        }
+  
+        nav a {
+          color: yellow;
+          text-decoration: none;
+          margin: 0 1em;
+          font-size: 1.2em;
+        }
+  
+        section {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          padding: 2em;
+        }
+  
+        .product {
+          background-color: white;
+          border: 1px solid blue;
+          border-radius: 5px;
+          margin: 1em;
+          padding: 1em;
+          width: 300px;
+        }
+  
+        .product img {
+          max-width: 100%;
+          height: auto;
+        }
+  
+        .product h2 {
+          font-size: 1.2em;
+          margin-bottom: 0.5em;
+        }
+  
+        .product p {
+          font-size: 0.9em;
+          color: #777;
+        }
+  
+        h2 {
+          /* Styling for the geeksforgeeks
+              text on the page which is green
+              in color, centered and has the
+              font family of Arial */
+          color: #2f8d46;
+          text-align: center;
+          font-family: "Arial";
+        }
+  
+        #search-bar {
+          /* Set the display as block which will 
+              take whole width of the page */
+          display: block;
+  
+          /* Set the margin-left and margin-right
+              to 'auto' so that search bar will be at
+             the center */
+          margin-left: auto;
+          margin-right: auto;
+  
+          /* Set the search bar to have the width
+              to '550px' and height to '40px' similar 
+              to Google Search Bar */
+          width: 550px;
+  
+          /* Set the border-radius to '50px' which 
+              makes the corners of search bar as round */
+          border-radius: 50px;
+          height: 40px;
+  
+          /* Set the border to a solid color */
+          border: 1px solid #dddddd;
+  
+          /* Disable the outline */
+          outline: none;
+  
+          /* Set the padding-left to '40px' that 
+              will make the cursor to start the 40px 
+              from the left  */
+          padding-left: 40px;
+        }
+  
+        input:hover {
+          /* Styling for search bar when we hover on
+                it to show the shadow of the search bar
+              The attributes for box-shadow are:
+              offset-x | offset-y | blur-radius | color */
+          box-shadow: 0px 1px 3px rgb(192, 185, 185);
+  
+          /* You can play with these values to
+              get your desired shadow effect */
+        }
+  
+        .buttons {
+          /* Styling the buttons of the page*/
+          padding: 10px 20px 10px 20px;
+          border-radius: 4px;
+          border: none;
+          margin-top: 20px;
+          cursor: pointer;
+        }
+  
+        .container {
+          /* Center the button on the page */
+          text-align: center;
+        }
+      </style>
+      <section>
+        <div class="product">
+          <img src="product1.jpg" alt="Product 1" />
+          <h2>Product 1</h2>
+          <p>
+            Description of Product 1. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+  
+        <div class="product">
+          <img src="product2.jpg" alt="Product 2" />
+          <h2>Product 2</h2>
+          <p>
+            Description of Product 2. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+  
+        <div class="product">
+          <img src="product2.jpg" alt="Product 2" />
+          <h2>Product 2</h2>
+          <p>
+            Description of Product 2. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+  
+        <div class="product">
+          <img src="product2.jpg" alt="Product 2" />
+          <h2>Product 2</h2>
+          <p>
+            Description of Product 2. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+  
+        <div class="product">
+          <img src="product2.jpg" alt="Product 2" />
+          <h2>Product 2</h2>
+          <p>
+            Description of Product 2. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit.
+          </p>
+          <p></p>
+          <button>Add to Cart</button>
+        </div>
+  
+        Add more products as needed
+      </section>
+    -->
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#"><strong>Mr. Kissan</strong></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto"></ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              id="search_field"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+          <button
+            type="button"
+            class="btn btn-success my-2 my-sm-0"
+            data-toggle="modal"
+            data-target="#staticBackdrop"
+          >
+            <i class="fas fa-shopping-cart total-count"></i>
+          </button>
+        </div>
+      </nav>
+      <section>
+        <div class="featured-area pt-100 pb-70">
+          <div class="container">
+            <div class="tab featured-tab-area">
+              <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8">
+                  <ul class="tabs active">
+                    <nav>
+                    <li class="">
+                      <a href="#">All</a>
+                    </li>
+                    <li class="">
+                      <a href="#"> Settings </a>
+                    </li>
+                    <li class="">
+                      <a href="#"> Machine </a>
+                    </li>
+                    <li class="">
+                      <a href="#"> Seeds </a>
+                    </li>
+                    <li class="">
+                      <a href="#"> Sprays </a>
+                    </li>
+                  </nav>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab_content current active pt-45">
+                <div class="tabs_item current">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img
+                              src="axle.jpeg"
+                              alt="Images"
+                              width="100px"
+                              height="100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Axle</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 1200</h4>
+                            <span>(4.9)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Axle"
+                              data-price="1200"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img
+                              src="Plough.jpg"
+                              alt="Images"
+                              width="180px"
+                              height="100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Plough </a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Plough"
+                              data-price="459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br> cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img
+                              src="Coriander.jpg"
+                              alt="Images"
+                              width="100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Coriander </a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 4059</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Coriander"
+                              data-price="4059"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br> cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img
+                              src="blower.jpg"
+                              alt="Images"
+                              width="100px"
+                              height="110px"
+                            />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Blower</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 800</h4>
+                            <span>(4.9)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Blower"
+                              data-price="800"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Spade.jpeg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Spade</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 2459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Spade"
+                              data-price="2459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+<!--
+                    <div class="container">
+                      <h2>Product Description</h2>
+                       Trigger the modal with a button
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                    
+                       Modal 
+                      <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                        
+                           Modal content
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                              <p>Some text in the modal.</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      
+                    </div>
+                  -->
+
+
+
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="productpage.html">
+                            <img src="Tractor.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Tractor </a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 1999</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Tractor"
+                              data-price="1999"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <!--<div class="container">
+                              <h2>Product Description</h2>  btn btn-info btn-lg  
+                               Trigger the modal with a button 
+                              <button type="button" class="btn btn-info btn-default" data-toggle="modal" data-target="#myModal">details</button>
+                            
+                               Modal
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+                                
+                                   Modal content
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Description</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      
+
+                                           
+
+
+                              
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                    <div class="featured-content-list">
+                                      <button
+                              type="button"
+                              data-name="Tractor"
+                              data-price="1999"
+                              class="btn btn-default"
+                            >
+                              Add to cart
+                            </button>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                              
+                            </div>-->
+
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                      
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Sesame.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Sesame</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 499</h4>
+                            <span>(4.9)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Sesame"
+                              data-price="499"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to<br> cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img
+                              src="Bucketsp.jpg"
+                              alt="Images"
+                              width="100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Bucketsp</a></h3>
+                          <hr />
+                          <div class="content-in" style="display: flex">
+                            <h4>₹ 1159</h4>
+                            <span>(4.0)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Bucketsp"
+                              data-price="1159"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="sickle.jpeg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">sickle</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 2059</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="sickle"
+                              data-price="2059"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Rotary.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Rotary</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 700</h4>
+                            <span>(3.9)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Rotary"
+                              data-price="700"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Cabbage.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Cabbage</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 4059</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Cabbage"
+                              data-price="4059"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--<div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img
+                              src="pruningshears.jpeg"
+                              alt="Images"
+                              width="100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">pruningshears</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="PruningShears"
+                              data-price="459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <div class="col-lg-3 col-md-6">
+                    <div class="featured-item">
+                      <div class="featured-item-img">
+                        <a href="#">
+                          <img src="Harveter.jpg" alt="Images" width="100px"/>
+                        </a>
+                      </div>
+                      <div class="content">
+                        <h3><a href="#">Harvester</a></h3>
+                        <hr />
+                        <div class="content-in">
+                          <h4>₹ 459</h4>
+                          <span>(4.4)<i class="fa fa-star"></i></span>
+                        </div>
+                        <hr />
+                        <div class="featured-content-list">
+                          <button
+                            type="button"
+                            data-name="Harvester"
+                            data-price="459"
+                            class="default-btn border-radius-5"
+                          >
+                            Add to cart
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6">
+                <div class="featured-item">
+                  <div class="featured-item-img">
+                    <a href="#">
+                      <img src="Rice.jpg" alt="Images" width="100px" />
+                    </a>
+                  </div>
+                  <div class="content">
+                    <h3><a href="#">Rice</a></h3>
+                    <hr />
+                    <div class="content-in">
+                      <h4>₹ 459</h4>
+                      <span>(4.4)<i class="fa fa-star"></i></span>
+                    </div>
+                    <hr />
+                    <div class="featured-content-list">
+                      <button
+                        type="button"
+                        data-name="Rice"
+                        data-price="459"
+                        class="default-btn border-radius-5"
+                      >
+                        Add to cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="orchard.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Orchard</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Orchard"
+                              data-price="459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to <br>cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tabs_item">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="axle.jpeg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Axle</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 1200</h4>
+                            <span>(4.9)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Axle"
+                              data-price="1200"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Spade.jpeg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Spade</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 800</h4>
+                            <span>(4.9)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Spade"
+                              data-price="800"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="sickle.jpeg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Sickle</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 499</h4>
+                            <span>(4.9)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Sickle"
+                              data-price="499"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="pruningshears.jpeg" alt="Images" width="100px"/>
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">PruningShears</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 700</h4>
+                            <span>(3.9)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="PruningShears"
+                              data-price="700"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+                <div class="tabs_item">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Plough.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Plough </a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Plough"
+                              data-price="459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Tractor.jpg" alt="Images" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Tractor</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 2459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Tractor"
+                              data-price="2459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+
+                            <div class="container">
+                              <h2></h2>
+                              <!-- Trigger the modal with a button -->
+                              <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Deatils</button>
+                            
+                              <!-- Modal -->
+                              <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      <h4 class="modal-title">Modal Header</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <h1>Mahindra Tractor 550D</h1>
+                                      <h4>Price: Rs.8,44,450.00</h4>
+                                      <select>
+                                        <option>Select colour</option>
+                                        <option>Red</option>
+                                        <option>Green</option>
+                                        <option>Blue</option>
+                                        <option>Orange</option>
+                                      </select>
+                                      <input type="number" value="1" />
+                                      <!--<a href="" class="btn">Add To Cart</a>-->
+                                      <div class="featured-content-list">
+                                        <!--<button
+                                type="button"
+                                data-name="Tractor"
+                                data-price="1999"
+                                class="btn btn-default"
+                              >
+                                Add to cart
+                              </button>-->
+                                    </div>
+                            
+                                      <h3>Product Details <i class="fa fa-indent"></i></h3>
+                                      <br />
+                                      <p>
+                                        This tractor from Trakstar is one of the popular offerings in the
+                                        market. This tractor can be used for all agricultural and commercial
+                                        needs. The diesel engine on the tractor is a 3-cylinder unit with a
+                                        capacity of 2979 CC. This engine Churns out a total output of 48 HP.
+                                      </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Rotary.jpg" alt="Images" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Rotary</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 1159</h4>
+                            <span>(4.0)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Rotary"
+                              data-price="1159"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-8">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Harveter.jpg" alt="Images" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Harvester</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 4059</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Harvester"
+                              data-price="4059"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+                <div class="tabs_item">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img
+                              src="Coriander.jpg"
+                              alt="Images"
+                              width="100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Coriander </a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 4059</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Coriander"
+                              data-price="4059"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Cabbage.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Cabbage </a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 1999</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Cabbage"
+                              data-price="1999"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--<div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Rice.jpg" alt="Images" width="100px"/>
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Rice</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 2059</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Rice"
+                              data-price="2059"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>-->
+
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="Sesame.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Sesame</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Sesame"
+                              data-price="459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tabs_item">
+                  <div class="row justify-content-center">
+                    <!--<div class="col-lg-3 col-md-6">
+                        <div class="featured-item">
+                          <div class="featured-item-img">
+                            <a href="#">
+                              <img src="Battery.jpg" alt="Images" width="100px"/>
+                            </a>
+                          </div>
+                          <div class="content">
+                            <h3><a href="#">Battery</a></h3>
+                            <hr />
+                            <div class="content-in">
+                              <h4>₹ 459</h4>
+                              <span>(4.4)<i class="fa fa-star"></i></span>
+                            </div>
+                            <hr />
+                            <div class="featured-content-list">
+                              <button
+                                type="button"
+                                data-name="Battery"
+                                data-price="459"
+                                class="default-btn border-radius-5"
+                              >
+                                Add to cart
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>-->
+
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="orchard.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Orchard</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Orchard"
+                              data-price="459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img src="blower.jpg" alt="Images" width="100px" />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Blower</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Blower"
+                              data-price="459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                      <div class="featured-item">
+                        <div class="featured-item-img">
+                          <a href="#">
+                            <img
+                              src="Bucketsp.jpg"
+                              alt="Images"
+                              width="100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="content">
+                          <h3><a href="#">Bucketsp</a></h3>
+                          <hr />
+                          <div class="content-in">
+                            <h4>₹ 459</h4>
+                            <span>(4.4)<i class="fa fa-star"></i></span>
+                          </div>
+                          <hr />
+                          <div class="featured-content-list">
+                            <button
+                              type="button"
+                              data-name="Bucketsp"
+                              data-price="459"
+                              class="default-btn border-radius-5"
+                            >
+                              Add to cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p id="not_found"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog mt-5" role="document">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="thanking-customers-section-modal-title" id="exampleModalLabel">Your Details</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                      
+                                      <label for="fname">Enter Your Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="fname">Enter Your Shop Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your Shop name..">
+                <label for="fname">Enter Mobile Number</label>
+                <input type="number" id="fname" name="firstname" placeholder="Your Mobile Number..">
+                
+
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Send Quote</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Your Cart</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div class="grand-total">
+                Total price: ₹<span class="total-cart"></span>
+              </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              <!--<button type="button" class="btn btn-danger clear-all">
+                Clear All
+              </button>-->
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary" onclick="finalClass"
+                  data-dismiss="modal"
+                  type="button" class="custom-button" data-toggle="modal" data-target="#exampleModal"
+                >
+                  Next
+                </button>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    
+
+    <!-- <style>
+        body {
+          font-family: "Lato", sans-serif;
+        }
+        
+        .sidenav {
+          height: 100%;
+          width: 200px;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+        
+        .sidenav a {
+          padding: 6px 6px 6px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+        }
+        
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+        
+        .main {
+          margin-left: 200px; /* Same as the width of the sidenav */
+        }
+        
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+        </style>
+        </head>
+        <div class="sidenav">
+        <ul class="tabs active">
+            <li class="">
+              <a href="#">All</a>
+            </li>
+            <li class="">
+              <a href="#"> Settings </a>
+            </li>
+            <li class="">
+              <a href="#"> Machine </a>
+            </li>
+            <li class="">
+              <a href="#"> Seeds </a>
+            </li>
+            <li class="">
+              <a href="#"> Sprays </a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="sidenav">
+          <a href="#">Settings</a>
+          <a href="#">Machine</a>
+          <a href="#">Seeds</a>
+          <a href="#">Sprays</a>
+        </div>
+        
+        <div class="main">
+          <h2>Sidenav Example</h2>
+          <p>This sidenav is </p>
+        </div>
+
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            * {box-sizing: border-box;}
+            
+            input[type=text], select, textarea {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              margin-top: 6px;
+              margin-bottom: 16px;
+              resize: vertical;
+            }
+            
+            input[type=submit] {
+              background-color: #04AA6D;
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+            input[type=submit]:hover {
+              background-color: #45a049;
+            }
+            
+            .container {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+            }
+            </style>
+            
+            <h3>Contact Form</h3>
+            
+            <div class="container">
+              <form>
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                <label for="lname">Shop Name</label>
+                <input type="text" id="sname" name="shopname" placeholder="Your shop name..">
+
+                <label for="Phone Number">Phone Number</label>
+                <input type="tel" id="Number" name="phone" placeholder="Enter phone number" /> 
+
+                <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div class="grand-total">
+                Total price: ₹<span class="total-cart"></span>
+              </div>
+            </div>
+
+            <input type="submit" value="Submit">
+              </form>
+            </div>-->
+
+
+
+            
+                <!--<label for="country">Country</label>
+                <select id="country" name="country">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+            
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Your Cart</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div class="grand-total">
+                Total price: ₹<span class="total-cart"></span>
+              </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              <button type="button" class="btn btn-danger clear-all">
+                Clear All
+              </button>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Send
+                </button>
+
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+            
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+
+            <script>
+                $('.default-btn').click(function (event) {
+                    // alert('working');
+                    event.preventDefault();
+                    var name = $(this).data('name');
+                    var price = Number($(this).data('price'));
+                    shoppingCart.addItemToCart(name, price, 1);
+                    displayCart();
+                  });
+                
+                  // Clear items
+                  $('.clear-cart').click(function () {
+                    shoppingCart.clearCart();
+                    displayCart();
+                  });
+                
+                
+                  function displayCart() {
+                    var cartArray = shoppingCart.listCart();
+                    var output = "";
+                    for (var i in cartArray) {
+                      output += "<tr>"
+                        + "<td>" + cartArray[i].name + "</td>"
+                        + "<td>(" + cartArray[i].price + ")</td>"
+                        + "<td><div class='input-group'>"
+                        + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+                        + "</div></td>"
+                        + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+                        + " = "
+                        + "<td>" + cartArray[i].total + "</td>"
+                        + "</tr>";
+                    }
+                    $('.show-cart').html(output);
+                    $('.total-cart').html(shoppingCart.totalCart());
+                    $('.total-count').html(shoppingCart.totalCount());
+                  }
+                
+                  // Delete item button
+                
+                  $('.show-cart').on("click", ".delete-item", function (event) {
+                    var name = $(this).data('name')
+                    shoppingCart.removeItemFromCartAll(name);
+                    displayCart();
+                  })
+                
+                  // Item count input
+                  $('.show-cart').on("change", ".item-count", function (event) {
+                    var name = $(this).data('name');
+                    var count = Number($(this).val());
+                    shoppingCart.setCountForItem(name, count);
+                    displayCart();
+                  });
+                  displayCart();
+            </script>-->
+
+
+            <!--<button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table"></table>
+              <div class="grand-total">
+                Total price: ₹<span class="total-cart"></span>
+              </div>
+            </div>
+
+            <input type="submit" value="Submit">
+              </form>
+            </div>-->
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
